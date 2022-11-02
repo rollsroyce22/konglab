@@ -1,10 +1,10 @@
 openapi: 3.0.0
 info:
-  version: '1.0.0'
-  title: Pizza Order API
+  version: '1.0.1'
+  title: Kong Gateway Demo
   license:
     name: Apache 2.0
-  description: 'Pizza ordering API Demo for today'
+  description: 'Demo for Kong Gateway'
   contact:
     name: Kong
 servers:
