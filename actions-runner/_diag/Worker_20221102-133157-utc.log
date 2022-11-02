@@ -1,0 +1,3927 @@
+[2022-11-02 13:31:57Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'Credentials': '/home/rroyce/dev/konglab/actions-runner/.credentials'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'Runner': '/home/rroyce/dev/konglab/actions-runner/.runner'
+[2022-11-02 13:31:57Z INFO Worker] Version: 2.298.2
+[2022-11-02 13:31:57Z INFO Worker] Commit: f49f0247c8f15ef51086a7c2405333cb91c6f3cd
+[2022-11-02 13:31:57Z INFO Worker] Culture: 
+[2022-11-02 13:31:57Z INFO Worker] UI Culture: 
+[2022-11-02 13:31:57Z INFO Worker] Waiting to receive the job message from the channel.
+[2022-11-02 13:31:57Z INFO ProcessChannel] Receiving message of length 39694, with hash 'e1dcc711f6c6e4bd31b375d3e343a98818b7b7671dd24343a858427b8fbaba33'
+[2022-11-02 13:31:57Z INFO Worker] Message received.
+[2022-11-02 13:31:57Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/actions_push_pr.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 13,
+        "col": 15,
+        "lit": "Checkout"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "62041293-335e-5c50-5049-1c5b2674cafb",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 15,
+        "lit": "Generate Kong declarative configuration from Spec"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 14,
+              "lit": "inso generate config ./openapi/orders.yaml --type declarative > kong.yaml"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "8611a35f-726f-5df9-c42a-62536284d173",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 17,
+        "col": 15,
+        "lit": "Validate Kong declarative configuration"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 14,
+              "lit": "deck validate"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dee5aafb-e84b-593a-7948-5ee57699cb7f",
+      "name": "__run_2"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.pipelineStartTime": {
+      "value": "2022-11-02 13:31:56+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "3"
+    },
+    "build.containerId": {
+      "value": "665552"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/actions_push_pr.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "Generate Kong config from Spec and Validate config"
+    },
+    "system.phaseId": {
+      "value": "d7f7f2ac-1d47-5d5c-6559-e1e87ba723db"
+    },
+    "system.phaseName": {
+      "value": "deploy_to_kong"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "deploy_to_kong.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "deploy_to_kong"
+    },
+    "system.jobDisplayName": {
+      "value": "Generate Kong config from Spec and Validate config"
+    },
+    "system.jobId": {
+      "value": "2c4954a3-4531-5df8-e9d6-393e63c18273"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 27,
+    "planId": "271ba3fb-bdf9-4002-a19d-4ea532a92269",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/3",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "konglab"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "rollsroyce22"
+    }
+  },
+  "timeline": {
+    "id": "271ba3fb-bdf9-4002-a19d-4ea532a92269",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "2c4954a3-4531-5df8-e9d6-393e63c18273",
+  "jobDisplayName": "Generate Kong config from Spec and Validate config",
+  "jobName": "__default",
+  "requestId": 3,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "69ea3e1d-e931-4843-802a-5216d98903d7",
+          "ServerName": "39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/271ba3fb-bdf9-4002-a19d-4ea532a92269/timelines/271ba3fb-bdf9-4002-a19d-4ea532a92269/records/2c4954a3-4531-5df8-e9d6-393e63c18273/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/pull/1/merge"
+        },
+        {
+          "k": "sha",
+          "v": "a8fd97c0ca896f816d635402818d75862fb3a301"
+        },
+        {
+          "k": "repository",
+          "v": "rollsroyce22/konglab"
+        },
+        {
+          "k": "repository_owner",
+          "v": "rollsroyce22"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "117282359"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/rollsroyce22/konglab.git"
+        },
+        {
+          "k": "run_id",
+          "v": "3377941383"
+        },
+        {
+          "k": "run_number",
+          "v": "1"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repository_id",
+          "v": "560864133"
+        },
+        {
+          "k": "actor_id",
+          "v": "117282359"
+        },
+        {
+          "k": "actor",
+          "v": "rollsroyce22"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "rollsroyce22"
+        },
+        {
+          "k": "workflow",
+          "v": "Action on Pull Request to generate Kong Config from Spec and Validate it"
+        },
+        {
+          "k": "head_ref",
+          "v": "patch-1"
+        },
+        {
+          "k": "base_ref",
+          "v": "master"
+        },
+        {
+          "k": "event_name",
+          "v": "pull_request"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "action",
+                "v": "opened"
+              },
+              {
+                "k": "number",
+                "v": 1.0
+              },
+              {
+                "k": "pull_request",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "_links",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "comments",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/1/comments"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "commits",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1/commits"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "html",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://github.com/rollsroyce22/konglab/pull/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "issue",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "review_comment",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/comments{/number}"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "review_comments",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1/comments"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "self",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "statuses",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "href",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/statuses/452ed92c7afa87a3a4e1c2d23c4154f01c5ca62f"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "active_lock_reason",
+                      "v": null
+                    },
+                    {
+                      "k": "additions",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "assignee",
+                      "v": null
+                    },
+                    {
+                      "k": "assignees",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "author_association",
+                      "v": "OWNER"
+                    },
+                    {
+                      "k": "auto_merge",
+                      "v": null
+                    },
+                    {
+                      "k": "base",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "label",
+                            "v": "rollsroyce22:master"
+                          },
+                          {
+                            "k": "ref",
+                            "v": "master"
+                          },
+                          {
+                            "k": "repo",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "allow_auto_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "allow_forking",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_merge_commit",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_rebase_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_squash_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_update_branch",
+                                  "v": false
+                                },
+                                {
+                                  "k": "archive_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/{archive_format}{/ref}"
+                                },
+                                {
+                                  "k": "archived",
+                                  "v": false
+                                },
+                                {
+                                  "k": "assignees_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/assignees{/user}"
+                                },
+                                {
+                                  "k": "blobs_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/blobs{/sha}"
+                                },
+                                {
+                                  "k": "branches_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/branches{/branch}"
+                                },
+                                {
+                                  "k": "clone_url",
+                                  "v": "https://github.com/rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "collaborators_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/collaborators{/collaborator}"
+                                },
+                                {
+                                  "k": "comments_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/comments{/number}"
+                                },
+                                {
+                                  "k": "commits_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/commits{/sha}"
+                                },
+                                {
+                                  "k": "compare_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/compare/{base}...{head}"
+                                },
+                                {
+                                  "k": "contents_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/contents/{+path}"
+                                },
+                                {
+                                  "k": "contributors_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/contributors"
+                                },
+                                {
+                                  "k": "created_at",
+                                  "v": "2022-11-02T12:46:29Z"
+                                },
+                                {
+                                  "k": "default_branch",
+                                  "v": "master"
+                                },
+                                {
+                                  "k": "delete_branch_on_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "deployments_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/deployments"
+                                },
+                                {
+                                  "k": "description",
+                                  "v": null
+                                },
+                                {
+                                  "k": "disabled",
+                                  "v": false
+                                },
+                                {
+                                  "k": "downloads_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/downloads"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/events"
+                                },
+                                {
+                                  "k": "fork",
+                                  "v": false
+                                },
+                                {
+                                  "k": "forks",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/forks"
+                                },
+                                {
+                                  "k": "full_name",
+                                  "v": "rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "git_commits_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/commits{/sha}"
+                                },
+                                {
+                                  "k": "git_refs_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/refs{/sha}"
+                                },
+                                {
+                                  "k": "git_tags_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/tags{/sha}"
+                                },
+                                {
+                                  "k": "git_url",
+                                  "v": "git://github.com/rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "has_downloads",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_issues",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_pages",
+                                  "v": false
+                                },
+                                {
+                                  "k": "has_projects",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_wiki",
+                                  "v": true
+                                },
+                                {
+                                  "k": "homepage",
+                                  "v": null
+                                },
+                                {
+                                  "k": "hooks_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/hooks"
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 560864133.0
+                                },
+                                {
+                                  "k": "is_template",
+                                  "v": false
+                                },
+                                {
+                                  "k": "issue_comment_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/comments{/number}"
+                                },
+                                {
+                                  "k": "issue_events_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/events{/number}"
+                                },
+                                {
+                                  "k": "issues_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues{/number}"
+                                },
+                                {
+                                  "k": "keys_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/keys{/key_id}"
+                                },
+                                {
+                                  "k": "labels_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/labels{/name}"
+                                },
+                                {
+                                  "k": "language",
+                                  "v": null
+                                },
+                                {
+                                  "k": "languages_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/languages"
+                                },
+                                {
+                                  "k": "license",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "key",
+                                        "v": "apache-2.0"
+                                      },
+                                      {
+                                        "k": "name",
+                                        "v": "Apache License 2.0"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "MDc6TGljZW5zZTI="
+                                      },
+                                      {
+                                        "k": "spdx_id",
+                                        "v": "Apache-2.0"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/licenses/apache-2.0"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "merge_commit_message",
+                                  "v": "PR_TITLE"
+                                },
+                                {
+                                  "k": "merge_commit_title",
+                                  "v": "MERGE_MESSAGE"
+                                },
+                                {
+                                  "k": "merges_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/merges"
+                                },
+                                {
+                                  "k": "milestones_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/milestones{/number}"
+                                },
+                                {
+                                  "k": "mirror_url",
+                                  "v": null
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "konglab"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "R_kgDOIW4bhQ"
+                                },
+                                {
+                                  "k": "notifications_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/notifications{?since,all,participating}"
+                                },
+                                {
+                                  "k": "open_issues",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "open_issues_count",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "owner",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "avatar_url",
+                                        "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                                      },
+                                      {
+                                        "k": "events_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                                      },
+                                      {
+                                        "k": "followers_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/followers"
+                                      },
+                                      {
+                                        "k": "following_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                                      },
+                                      {
+                                        "k": "gists_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                                      },
+                                      {
+                                        "k": "gravatar_id",
+                                        "v": ""
+                                      },
+                                      {
+                                        "k": "html_url",
+                                        "v": "https://github.com/rollsroyce22"
+                                      },
+                                      {
+                                        "k": "id",
+                                        "v": 117282359.0
+                                      },
+                                      {
+                                        "k": "login",
+                                        "v": "rollsroyce22"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "U_kgDOBv2WNw"
+                                      },
+                                      {
+                                        "k": "organizations_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/orgs"
+                                      },
+                                      {
+                                        "k": "received_events_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/received_events"
+                                      },
+                                      {
+                                        "k": "repos_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/repos"
+                                      },
+                                      {
+                                        "k": "site_admin",
+                                        "v": false
+                                      },
+                                      {
+                                        "k": "starred_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                                      },
+                                      {
+                                        "k": "subscriptions_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                                      },
+                                      {
+                                        "k": "type",
+                                        "v": "User"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/users/rollsroyce22"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "private",
+                                  "v": false
+                                },
+                                {
+                                  "k": "pulls_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls{/number}"
+                                },
+                                {
+                                  "k": "pushed_at",
+                                  "v": "2022-11-02T13:29:55Z"
+                                },
+                                {
+                                  "k": "releases_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/releases{/id}"
+                                },
+                                {
+                                  "k": "size",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "squash_merge_commit_message",
+                                  "v": "COMMIT_MESSAGES"
+                                },
+                                {
+                                  "k": "squash_merge_commit_title",
+                                  "v": "COMMIT_OR_PR_TITLE"
+                                },
+                                {
+                                  "k": "ssh_url",
+                                  "v": "git@github.com:rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "stargazers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "stargazers_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/stargazers"
+                                },
+                                {
+                                  "k": "statuses_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/statuses/{sha}"
+                                },
+                                {
+                                  "k": "subscribers_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/subscribers"
+                                },
+                                {
+                                  "k": "subscription_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/subscription"
+                                },
+                                {
+                                  "k": "svn_url",
+                                  "v": "https://github.com/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "tags_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/tags"
+                                },
+                                {
+                                  "k": "teams_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/teams"
+                                },
+                                {
+                                  "k": "topics",
+                                  "v": {
+                                    "t": 1
+                                  }
+                                },
+                                {
+                                  "k": "trees_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/trees{/sha}"
+                                },
+                                {
+                                  "k": "updated_at",
+                                  "v": "2022-11-02T12:46:29Z"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "use_squash_pr_title_as_default",
+                                  "v": false
+                                },
+                                {
+                                  "k": "visibility",
+                                  "v": "public"
+                                },
+                                {
+                                  "k": "watchers",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "watchers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "web_commit_signoff_required",
+                                  "v": false
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "sha",
+                            "v": "80fa1ab877297e282684ef956f9d46aa20cefe96"
+                          },
+                          {
+                            "k": "user",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/rollsroyce22"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 117282359.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "rollsroyce22"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "U_kgDOBv2WNw"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/rollsroyce22"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "body",
+                      "v": null
+                    },
+                    {
+                      "k": "changed_files",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "closed_at",
+                      "v": null
+                    },
+                    {
+                      "k": "comments",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/1/comments"
+                    },
+                    {
+                      "k": "commits",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1/commits"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2022-11-02T13:29:54Z"
+                    },
+                    {
+                      "k": "deletions",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "diff_url",
+                      "v": "https://github.com/rollsroyce22/konglab/pull/1.diff"
+                    },
+                    {
+                      "k": "draft",
+                      "v": false
+                    },
+                    {
+                      "k": "head",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "label",
+                            "v": "rollsroyce22:patch-1"
+                          },
+                          {
+                            "k": "ref",
+                            "v": "patch-1"
+                          },
+                          {
+                            "k": "repo",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "allow_auto_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "allow_forking",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_merge_commit",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_rebase_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_squash_merge",
+                                  "v": true
+                                },
+                                {
+                                  "k": "allow_update_branch",
+                                  "v": false
+                                },
+                                {
+                                  "k": "archive_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/{archive_format}{/ref}"
+                                },
+                                {
+                                  "k": "archived",
+                                  "v": false
+                                },
+                                {
+                                  "k": "assignees_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/assignees{/user}"
+                                },
+                                {
+                                  "k": "blobs_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/blobs{/sha}"
+                                },
+                                {
+                                  "k": "branches_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/branches{/branch}"
+                                },
+                                {
+                                  "k": "clone_url",
+                                  "v": "https://github.com/rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "collaborators_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/collaborators{/collaborator}"
+                                },
+                                {
+                                  "k": "comments_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/comments{/number}"
+                                },
+                                {
+                                  "k": "commits_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/commits{/sha}"
+                                },
+                                {
+                                  "k": "compare_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/compare/{base}...{head}"
+                                },
+                                {
+                                  "k": "contents_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/contents/{+path}"
+                                },
+                                {
+                                  "k": "contributors_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/contributors"
+                                },
+                                {
+                                  "k": "created_at",
+                                  "v": "2022-11-02T12:46:29Z"
+                                },
+                                {
+                                  "k": "default_branch",
+                                  "v": "master"
+                                },
+                                {
+                                  "k": "delete_branch_on_merge",
+                                  "v": false
+                                },
+                                {
+                                  "k": "deployments_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/deployments"
+                                },
+                                {
+                                  "k": "description",
+                                  "v": null
+                                },
+                                {
+                                  "k": "disabled",
+                                  "v": false
+                                },
+                                {
+                                  "k": "downloads_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/downloads"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/events"
+                                },
+                                {
+                                  "k": "fork",
+                                  "v": false
+                                },
+                                {
+                                  "k": "forks",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "forks_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/forks"
+                                },
+                                {
+                                  "k": "full_name",
+                                  "v": "rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "git_commits_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/commits{/sha}"
+                                },
+                                {
+                                  "k": "git_refs_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/refs{/sha}"
+                                },
+                                {
+                                  "k": "git_tags_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/tags{/sha}"
+                                },
+                                {
+                                  "k": "git_url",
+                                  "v": "git://github.com/rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "has_downloads",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_issues",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_pages",
+                                  "v": false
+                                },
+                                {
+                                  "k": "has_projects",
+                                  "v": true
+                                },
+                                {
+                                  "k": "has_wiki",
+                                  "v": true
+                                },
+                                {
+                                  "k": "homepage",
+                                  "v": null
+                                },
+                                {
+                                  "k": "hooks_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/hooks"
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 560864133.0
+                                },
+                                {
+                                  "k": "is_template",
+                                  "v": false
+                                },
+                                {
+                                  "k": "issue_comment_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/comments{/number}"
+                                },
+                                {
+                                  "k": "issue_events_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/events{/number}"
+                                },
+                                {
+                                  "k": "issues_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/issues{/number}"
+                                },
+                                {
+                                  "k": "keys_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/keys{/key_id}"
+                                },
+                                {
+                                  "k": "labels_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/labels{/name}"
+                                },
+                                {
+                                  "k": "language",
+                                  "v": null
+                                },
+                                {
+                                  "k": "languages_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/languages"
+                                },
+                                {
+                                  "k": "license",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "key",
+                                        "v": "apache-2.0"
+                                      },
+                                      {
+                                        "k": "name",
+                                        "v": "Apache License 2.0"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "MDc6TGljZW5zZTI="
+                                      },
+                                      {
+                                        "k": "spdx_id",
+                                        "v": "Apache-2.0"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/licenses/apache-2.0"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "merge_commit_message",
+                                  "v": "PR_TITLE"
+                                },
+                                {
+                                  "k": "merge_commit_title",
+                                  "v": "MERGE_MESSAGE"
+                                },
+                                {
+                                  "k": "merges_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/merges"
+                                },
+                                {
+                                  "k": "milestones_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/milestones{/number}"
+                                },
+                                {
+                                  "k": "mirror_url",
+                                  "v": null
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "konglab"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "R_kgDOIW4bhQ"
+                                },
+                                {
+                                  "k": "notifications_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/notifications{?since,all,participating}"
+                                },
+                                {
+                                  "k": "open_issues",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "open_issues_count",
+                                  "v": 1.0
+                                },
+                                {
+                                  "k": "owner",
+                                  "v": {
+                                    "t": 2,
+                                    "d": [
+                                      {
+                                        "k": "avatar_url",
+                                        "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                                      },
+                                      {
+                                        "k": "events_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                                      },
+                                      {
+                                        "k": "followers_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/followers"
+                                      },
+                                      {
+                                        "k": "following_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                                      },
+                                      {
+                                        "k": "gists_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                                      },
+                                      {
+                                        "k": "gravatar_id",
+                                        "v": ""
+                                      },
+                                      {
+                                        "k": "html_url",
+                                        "v": "https://github.com/rollsroyce22"
+                                      },
+                                      {
+                                        "k": "id",
+                                        "v": 117282359.0
+                                      },
+                                      {
+                                        "k": "login",
+                                        "v": "rollsroyce22"
+                                      },
+                                      {
+                                        "k": "node_id",
+                                        "v": "U_kgDOBv2WNw"
+                                      },
+                                      {
+                                        "k": "organizations_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/orgs"
+                                      },
+                                      {
+                                        "k": "received_events_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/received_events"
+                                      },
+                                      {
+                                        "k": "repos_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/repos"
+                                      },
+                                      {
+                                        "k": "site_admin",
+                                        "v": false
+                                      },
+                                      {
+                                        "k": "starred_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                                      },
+                                      {
+                                        "k": "subscriptions_url",
+                                        "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                                      },
+                                      {
+                                        "k": "type",
+                                        "v": "User"
+                                      },
+                                      {
+                                        "k": "url",
+                                        "v": "https://api.github.com/users/rollsroyce22"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "k": "private",
+                                  "v": false
+                                },
+                                {
+                                  "k": "pulls_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls{/number}"
+                                },
+                                {
+                                  "k": "pushed_at",
+                                  "v": "2022-11-02T13:29:55Z"
+                                },
+                                {
+                                  "k": "releases_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/releases{/id}"
+                                },
+                                {
+                                  "k": "size",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "squash_merge_commit_message",
+                                  "v": "COMMIT_MESSAGES"
+                                },
+                                {
+                                  "k": "squash_merge_commit_title",
+                                  "v": "COMMIT_OR_PR_TITLE"
+                                },
+                                {
+                                  "k": "ssh_url",
+                                  "v": "git@github.com:rollsroyce22/konglab.git"
+                                },
+                                {
+                                  "k": "stargazers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "stargazers_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/stargazers"
+                                },
+                                {
+                                  "k": "statuses_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/statuses/{sha}"
+                                },
+                                {
+                                  "k": "subscribers_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/subscribers"
+                                },
+                                {
+                                  "k": "subscription_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/subscription"
+                                },
+                                {
+                                  "k": "svn_url",
+                                  "v": "https://github.com/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "tags_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/tags"
+                                },
+                                {
+                                  "k": "teams_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/teams"
+                                },
+                                {
+                                  "k": "topics",
+                                  "v": {
+                                    "t": 1
+                                  }
+                                },
+                                {
+                                  "k": "trees_url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab/git/trees{/sha}"
+                                },
+                                {
+                                  "k": "updated_at",
+                                  "v": "2022-11-02T12:46:29Z"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/repos/rollsroyce22/konglab"
+                                },
+                                {
+                                  "k": "use_squash_pr_title_as_default",
+                                  "v": false
+                                },
+                                {
+                                  "k": "visibility",
+                                  "v": "public"
+                                },
+                                {
+                                  "k": "watchers",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "watchers_count",
+                                  "v": 0.0
+                                },
+                                {
+                                  "k": "web_commit_signoff_required",
+                                  "v": false
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "sha",
+                            "v": "452ed92c7afa87a3a4e1c2d23c4154f01c5ca62f"
+                          },
+                          {
+                            "k": "user",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/rollsroyce22"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 117282359.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "rollsroyce22"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "U_kgDOBv2WNw"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/rollsroyce22"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/rollsroyce22/konglab/pull/1"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1108261549.0
+                    },
+                    {
+                      "k": "issue_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/1"
+                    },
+                    {
+                      "k": "labels",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "locked",
+                      "v": false
+                    },
+                    {
+                      "k": "maintainer_can_modify",
+                      "v": false
+                    },
+                    {
+                      "k": "merge_commit_sha",
+                      "v": null
+                    },
+                    {
+                      "k": "mergeable",
+                      "v": null
+                    },
+                    {
+                      "k": "mergeable_state",
+                      "v": "unknown"
+                    },
+                    {
+                      "k": "merged",
+                      "v": false
+                    },
+                    {
+                      "k": "merged_at",
+                      "v": null
+                    },
+                    {
+                      "k": "merged_by",
+                      "v": null
+                    },
+                    {
+                      "k": "milestone",
+                      "v": null
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "PR_kwDOIW4bhc5CDrqt"
+                    },
+                    {
+                      "k": "number",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "patch_url",
+                      "v": "https://github.com/rollsroyce22/konglab/pull/1.patch"
+                    },
+                    {
+                      "k": "rebaseable",
+                      "v": null
+                    },
+                    {
+                      "k": "requested_reviewers",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "requested_teams",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "review_comment_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/comments{/number}"
+                    },
+                    {
+                      "k": "review_comments",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "review_comments_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1/comments"
+                    },
+                    {
+                      "k": "state",
+                      "v": "open"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/statuses/452ed92c7afa87a3a4e1c2d23c4154f01c5ca62f"
+                    },
+                    {
+                      "k": "title",
+                      "v": "patch-1"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2022-11-02T13:29:54Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls/1"
+                    },
+                    {
+                      "k": "user",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/rollsroyce22/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/rollsroyce22"
+                          },
+                          {
+                            "k": "id",
+                            "v": 117282359.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "rollsroyce22"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBv2WNw"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/rollsroyce22/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/rollsroyce22/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/rollsroyce22/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/rollsroyce22"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/rollsroyce22/konglab.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2022-11-02T12:46:29Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "rollsroyce22/konglab"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/rollsroyce22/konglab.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/rollsroyce22/konglab"
+                    },
+                    {
+                      "k": "id",
+                      "v": 560864133.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": null
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "key",
+                            "v": "apache-2.0"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Apache License 2.0"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDc6TGljZW5zZTI="
+                          },
+                          {
+                            "k": "spdx_id",
+                            "v": "Apache-2.0"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/licenses/apache-2.0"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "konglab"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOIW4bhQ"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/rollsroyce22/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/rollsroyce22"
+                          },
+                          {
+                            "k": "id",
+                            "v": 117282359.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "rollsroyce22"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBv2WNw"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/rollsroyce22/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/rollsroyce22/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/rollsroyce22/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/rollsroyce22"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2022-11-02T13:29:55Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:rollsroyce22/konglab.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/rollsroyce22/konglab"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2022-11-02T12:46:29Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/rollsroyce22/konglab"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/117282359?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/rollsroyce22/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/rollsroyce22/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/rollsroyce22/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/rollsroyce22/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/rollsroyce22"
+                    },
+                    {
+                      "k": "id",
+                      "v": 117282359.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "rollsroyce22"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBv2WNw"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/rollsroyce22/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/rollsroyce22/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/rollsroyce22/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/rollsroyce22/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/rollsroyce22/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/rollsroyce22"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "1/merge"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2022-11-02 13:31:57Z INFO JobRunner] Job ID 2c4954a3-4531-5df8-e9d6-393e63c18273
+[2022-11-02 13:31:57Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/
+[2022-11-02 13:31:57Z INFO ConfigurationStore] currentAssemblyLocation: /home/rroyce/dev/konglab/actions-runner/bin/Runner.Worker.dll
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] binPath: /home/rroyce/dev/konglab/actions-runner/bin
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] RootFolder: /home/rroyce/dev/konglab/actions-runner
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'Runner': '/home/rroyce/dev/konglab/actions-runner/.runner'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] ConfigFilePath: /home/rroyce/dev/konglab/actions-runner/.runner
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'Credentials': '/home/rroyce/dev/konglab/actions-runner/.credentials'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] CredFilePath: /home/rroyce/dev/konglab/actions-runner/.credentials
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/rroyce/dev/konglab/actions-runner/.credentials_migrated'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] MigratedCredFilePath: /home/rroyce/dev/konglab/actions-runner/.credentials_migrated
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:57Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:57Z INFO HostContext] Well known config file 'Service': '/home/rroyce/dev/konglab/actions-runner/.service'
+[2022-11-02 13:31:57Z INFO ConfigurationStore] ServiceConfigFilePath: /home/rroyce/dev/konglab/actions-runner/.service
+[2022-11-02 13:31:57Z INFO ConfigurationStore] Read setting file: 296 chars
+[2022-11-02 13:31:57Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-11-02 13:31:57Z INFO Worker] Listening for cancel message from the channel.
+[2022-11-02 13:31:57Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2022-11-02 13:31:58Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-11-02 13:31:58Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/271ba3fb-bdf9-4002-a19d-4ea532a92269/timelines/271ba3fb-bdf9-4002-a19d-4ea532a92269/records/2c4954a3-4531-5df8-e9d6-393e63c18273/feedstream?api-version=6.0-preview
+[2022-11-02 13:31:58Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Start process web console line queue.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Start process file upload queue.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Start process timeline update queue.
+[2022-11-02 13:31:58Z INFO ExecutionContext] Initialize GitHub context
+[2022-11-02 13:31:58Z INFO ExecutionContext] Initialize Env context
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:58Z INFO JobRunner] Starting the job execution context.
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO JobRunner] Validating directory permissions for: '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Tools': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_tool'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:31:58Z INFO JobRunner] Getting job extension.
+[2022-11-02 13:31:58Z INFO JobRunner] Initialize job. Getting all job steps.
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known config file 'Credentials': '/home/rroyce/dev/konglab/actions-runner/.credentials'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known config file 'SetupInfo': '/home/rroyce/dev/konglab/actions-runner/.setup_info'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO PipelineDirectoryManager] Loading tracking config if exists: /home/rroyce/dev/konglab/actions-runner/kong-gateway/_PipelineMapping/rollsroyce22/konglab/PipelineFolder.json
+[2022-11-02 13:31:58Z INFO PipelineDirectoryManager] Updating job run properties.
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO JobExtension] Downloading actions
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:58Z INFO JobServer] Successfully started websocket client.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56eaf0b2-f8fa-4186-8060-9789471f17eb', success rate: 1/1.
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:58Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:58Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/e2f20e631ae6d7dd3b768f56a5d2af784dd54791' into /home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/_temp_61fc953f-de17-4bb7-ac29-b51d97b6bf90/b6457c75-4ce2-4c6b-b53d-93fa6e826c32.tar.gz.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56eaf0b2-f8fa-4186-8060-9789471f17eb', success rate: 1/1.
+[2022-11-02 13:31:58Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2022-11-02 13:31:59Z INFO ActionManager] Which: 'tar'
+[2022-11-02 13:31:59Z INFO ActionManager] Location: '/usr/bin/tar'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] Starting process:
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/_temp_61fc953f-de17-4bb7-ac29-b51d97b6bf90/b6457c75-4ce2-4c6b-b53d-93fa6e826c32.tar.gz"'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Working directory: '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/_temp_61fc953f-de17-4bb7-ac29-b51d97b6bf90/_staging'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 51088.
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] Process started with process id 51088, waiting for process exit.
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] Finished process 51088 with exit code 0, and elapsed time 00:00:00.0168779.
+[2022-11-02 13:31:59Z INFO ActionManager] Finished getting action repository.
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-11-02 13:31:59Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManager] Load action that reference repository from '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/actions/checkout/v2'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-11-02 13:31:59Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-11-02 13:31:59Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-11-02 13:31:59Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-11-02 13:31:59Z INFO JobExtension] Adding .
+[2022-11-02 13:31:59Z INFO JobExtension] Adding .
+[2022-11-02 13:31:59Z INFO JobExtension] Adding .
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:59Z INFO JobExtension] Total accessible running process: 63.
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "56eaf0b2-f8fa-4186-8060-9789471f17eb",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2022-11-02T13:31:58.3024568Z",
+  "finishTime": "2022-11-02T13:31:59.8576061Z"
+}.
+[2022-11-02 13:31:59Z INFO JobRunner] Total job steps: 3.
+[2022-11-02 13:31:59Z INFO JobRunner] Run all job steps.
+[2022-11-02 13:31:59Z INFO StepsRunner] Processing step: DisplayName='Checkout'
+[2022-11-02 13:31:59Z INFO StepsRunner] Evaluating: success()
+[2022-11-02 13:31:59Z INFO StepsRunner] Result: true
+[2022-11-02 13:31:59Z INFO StepsRunner] Starting the step.
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManager] Load action that reference repository from '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/actions/checkout/v2'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-11-02 13:31:59Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-11-02 13:31:59Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-11-02 13:31:59Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-11-02 13:31:59Z INFO ExecutionContext] Reserve record order 5 to 8 for post job actions.
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:31:59Z INFO ExecutionContext] Write event payload to /home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_github_workflow/event.json
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:31:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "rollsroyce22/konglab"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2022-11-02 13:31:59Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:31:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command error
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command group
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-11-02 13:31:59Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:31:59Z INFO HostContext] Well known directory 'Externals': '/home/rroyce/dev/konglab/actions-runner/externals'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper] Starting process:
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   File name: '/home/rroyce/dev/konglab/actions-runner/externals/node12/bin/node'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Arguments: '"/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/actions/checkout/v2/dist/index.js"'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Working directory: '/home/rroyce/dev/konglab/actions-runner/kong-gateway/konglab/konglab'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-11-02 13:31:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-11-02 13:32:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '62041293-335e-5c50-5049-1c5b2674cafb', success rate: 1/1.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 51091.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Process started with process id 51091, waiting for process exit.
+[2022-11-02 13:32:00Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2022-11-02 13:32:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '62041293-335e-5c50-5049-1c5b2674cafb', success rate: 1/1.
+[2022-11-02 13:32:00Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2022-11-02 13:32:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '62041293-335e-5c50-5049-1c5b2674cafb', success rate: 1/1.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Finished process 51091 with exit code 0, and elapsed time 00:00:00.8384057.
+[2022-11-02 13:32:00Z INFO CreateStepSummaryCommand] Step Summary file (/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_runner_file_commands/step_summary_5ad9f0ef-5836-457e-b7ab-4a4d4901e909) is empty; skipping attachment upload
+[2022-11-02 13:32:00Z INFO StepsRunner] Step result: 
+[2022-11-02 13:32:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Main",
+  "stepId": "62041293-335e-5c50-5049-1c5b2674cafb",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2022-11-02T13:31:59.8842209Z",
+  "finishTime": "2022-11-02T13:32:00.8039813Z"
+}.
+[2022-11-02 13:32:00Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2022-11-02 13:32:00Z INFO StepsRunner] Current state: job state = ''
+[2022-11-02 13:32:00Z INFO StepsRunner] Processing step: DisplayName='Generate Kong declarative configuration from Spec'
+[2022-11-02 13:32:00Z INFO StepsRunner] Evaluating: success()
+[2022-11-02 13:32:00Z INFO StepsRunner] Result: true
+[2022-11-02 13:32:00Z INFO StepsRunner] Starting the step.
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:32:00Z INFO ExecutionContext] Write event payload to /home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_github_workflow/event.json
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:32:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-11-02 13:32:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command error
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command group
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-11-02 13:32:00Z INFO ScriptHandler] Which: 'bash'
+[2022-11-02 13:32:00Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:32:00Z INFO ScriptHandler] Which: 'bash'
+[2022-11-02 13:32:00Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Starting process:
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/94a4dda3-747f-406b-ac1f-18ac6d03ff78.sh'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Working directory: '/home/rroyce/dev/konglab/actions-runner/kong-gateway/konglab/konglab'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 51181.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Process started with process id 51181, waiting for process exit.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Finished process 51181 with exit code 127, and elapsed time 00:00:00.0574346.
+[2022-11-02 13:32:00Z INFO CreateStepSummaryCommand] Step Summary file (/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_runner_file_commands/step_summary_6453e23e-47ca-49a9-942d-5ae1aa24ceb8) is empty; skipping attachment upload
+[2022-11-02 13:32:00Z INFO StepsRunner] Step result: Failed
+[2022-11-02 13:32:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "8611a35f-726f-5df9-c42a-62536284d173",
+  "stepContextName": "__run",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 127."
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2022-11-02T13:32:00.8043519Z",
+  "finishTime": "2022-11-02T13:32:00.8803652Z"
+}.
+[2022-11-02 13:32:00Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2022-11-02 13:32:00Z INFO StepsRunner] Current state: job state = 'Failed'
+[2022-11-02 13:32:00Z INFO StepsRunner] Processing step: DisplayName='Validate Kong declarative configuration'
+[2022-11-02 13:32:00Z INFO StepsRunner] Evaluating: success()
+[2022-11-02 13:32:00Z INFO StepsRunner] Result: false
+[2022-11-02 13:32:00Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2022-11-02 13:32:00Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2022-11-02 13:32:00Z INFO StepsRunner] Current state: job state = 'Failed'
+[2022-11-02 13:32:00Z INFO StepsRunner] Processing step: DisplayName='Post Checkout'
+[2022-11-02 13:32:00Z INFO StepsRunner] Evaluating: always()
+[2022-11-02 13:32:00Z INFO StepsRunner] Result: true
+[2022-11-02 13:32:00Z INFO StepsRunner] Starting the step.
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:32:00Z INFO ActionManager] Load action that reference repository from '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/actions/checkout/v2'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Actions': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions'
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2022-11-02 13:32:00Z INFO ActionManager] Action pre node.js file: N/A.
+[2022-11-02 13:32:00Z INFO ActionManager] Action node.js file: dist/index.js.
+[2022-11-02 13:32:00Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:32:00Z INFO ExecutionContext] Write event payload to /home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_github_workflow/event.json
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Work': '/home/rroyce/dev/konglab/actions-runner/kong-gateway'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Temp': '/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp'
+[2022-11-02 13:32:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "rollsroyce22/konglab"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2022-11-02 13:32:00Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2022-11-02 13:32:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command error
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command group
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2022-11-02 13:32:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:00Z INFO HostContext] Well known directory 'Externals': '/home/rroyce/dev/konglab/actions-runner/externals'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Starting process:
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   File name: '/home/rroyce/dev/konglab/actions-runner/externals/node12/bin/node'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Arguments: '"/home/rroyce/dev/konglab/actions-runner/kong-gateway/_actions/actions/checkout/v2/dist/index.js"'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Working directory: '/home/rroyce/dev/konglab/actions-runner/kong-gateway/konglab/konglab'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 51183.
+[2022-11-02 13:32:00Z INFO ProcessInvokerWrapper] Process started with process id 51183, waiting for process exit.
+[2022-11-02 13:32:00Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '62041293-335e-5c50-5049-1c5b2674cafb', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8611a35f-726f-5df9-c42a-62536284d173', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3bd59ed6-7054-41d6-be06-e64d8eada234', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:32:01Z INFO ProcessInvokerWrapper] Finished process 51183 with exit code 0, and elapsed time 00:00:00.1479826.
+[2022-11-02 13:32:01Z INFO CreateStepSummaryCommand] Step Summary file (/home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp/_runner_file_commands/step_summary_48fe2002-af17-4252-9e01-bbb701d8f810) is empty; skipping attachment upload
+[2022-11-02 13:32:01Z INFO StepsRunner] Step result: 
+[2022-11-02 13:32:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Post",
+  "stepId": "3bd59ed6-7054-41d6-be06-e64d8eada234",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2022-11-02T13:32:00.880996Z",
+  "finishTime": "2022-11-02T13:32:01.0338282Z"
+}.
+[2022-11-02 13:32:01Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2022-11-02 13:32:01Z INFO StepsRunner] Current state: job state = 'Failed'
+[2022-11-02 13:32:01Z INFO JobRunner] Finalize job.
+[2022-11-02 13:32:01Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:01Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:01Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:32:01Z INFO JobExtension] Initialize Env context
+[2022-11-02 13:32:01Z INFO JobExtension] Initialize steps context
+[2022-11-02 13:32:01Z INFO JobExtension] Total accessible running process: 62.
+[2022-11-02 13:32:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "58b0dfa9-586c-4310-8544-f40122a9f72f",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2022-11-02T13:32:01.0412552Z",
+  "finishTime": "2022-11-02T13:32:01.0457135Z"
+}.
+[2022-11-02 13:32:01Z INFO JobRunner] Job result after all job steps finish: Failed
+[2022-11-02 13:32:01Z INFO JobRunner] Completing the job execution context.
+[2022-11-02 13:32:01Z INFO JobRunner] Shutting down the job server queue.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2022-11-02 13:32:01Z INFO JobServerQueue] All queue process task stopped.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3bd59ed6-7054-41d6-be06-e64d8eada234', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '58b0dfa9-586c-4310-8544-f40122a9f72f', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2c4954a3-4531-5df8-e9d6-393e63c18273', success rate: 1/1.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Web console line queue drained.
+[2022-11-02 13:32:01Z INFO JobServerQueue] Uploading 5 files in one shot.
+[2022-11-02 13:32:02Z INFO JobServerQueue] Try to upload 5 log files or attachments, success rate: 5/5.
+[2022-11-02 13:32:02Z INFO JobServerQueue] File upload queue drained.
+[2022-11-02 13:32:02Z INFO JobServerQueue] Timeline update queue drained.
+[2022-11-02 13:32:02Z INFO JobServerQueue] Disposing job server ...
+[2022-11-02 13:32:02Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2022-11-02 13:32:02Z INFO TempDirectoryManager] Cleaning runner temp folder: /home/rroyce/dev/konglab/actions-runner/kong-gateway/_temp
+[2022-11-02 13:32:02Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:32:02Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:32:02Z INFO HostContext] Well known directory 'Diag': '/home/rroyce/dev/konglab/actions-runner/_diag'
+[2022-11-02 13:32:02Z INFO HostContext] Well known config file 'Telemetry': '/home/rroyce/dev/konglab/actions-runner/_diag/.telemetry'
+[2022-11-02 13:32:02Z INFO JobRunner] Raising job completed event
+[2022-11-02 13:32:02Z INFO Worker] Job completed.

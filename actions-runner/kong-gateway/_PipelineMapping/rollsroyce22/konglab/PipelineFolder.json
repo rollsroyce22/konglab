@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "rollsroyce22/konglab",
+  "pipelineDirectory": "konglab",
+  "workspaceDirectory": "konglab/konglab",
+  "repositories": {
+    "rollsroyce22/konglab": {
+      "repositoryPath": "konglab/konglab",
+      "lastRunOn": "11/02/2022 09:12:41 -04:00"
+    }
+  },
+  "lastRunOn": "11/02/2022 09:31:58 -04:00"
+}
