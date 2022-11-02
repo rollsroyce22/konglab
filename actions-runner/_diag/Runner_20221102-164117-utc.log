@@ -115,3 +115,11 @@
 [2022-11-02 17:11:22Z INFO MessageListener] No message retrieved from session '2526dffb-9485-442b-a1fb-95c1a0f29c40' within last 30 minutes.
 [2022-11-02 17:36:26Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams
 [2022-11-02 17:36:26Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2022-11-02 17:39:30Z INFO Terminal] WRITE LINE: Exiting...
+[2022-11-02 17:39:30Z INFO ConfigurationStore] IsServiceConfigured()
+[2022-11-02 17:39:30Z INFO ConfigurationStore] IsServiceConfigured: False
+[2022-11-02 17:39:30Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2022-11-02 17:39:30Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/_apis/distributedtask/pools/1/messages?sessionId=2526dffb-9485-442b-a1fb-95c1a0f29c40&status=Online has been cancelled.
+[2022-11-02 17:39:30Z INFO MessageListener] Get next message has been cancelled.
+[2022-11-02 17:39:30Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2022-11-02 17:39:30Z INFO Listener] Runner execution been cancelled.
