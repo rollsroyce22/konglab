@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - kong-dev
 
 jobs:
   deploy_to_kong:
