@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "kong-gateway",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX",
+  "gitHubUrl": "https://github.com/rollsroyce22/konglab",
+  "workFolder": "kong-gateway"
+}

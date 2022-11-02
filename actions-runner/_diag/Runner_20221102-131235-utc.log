@@ -1,0 +1,159 @@
+[2022-11-02 13:12:35Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'Credentials': '/home/rroyce/dev/konglab/actions-runner/.credentials'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'Runner': '/home/rroyce/dev/konglab/actions-runner/.runner'
+[2022-11-02 13:12:35Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2022-11-02 13:12:35Z INFO Listener] RuntimeInformation: Linux 5.15.68.1-microsoft-standard-WSL2 #1 SMP Mon Sep 19 19:14:52 UTC 2022.
+[2022-11-02 13:12:35Z INFO Listener] Version: 2.298.2
+[2022-11-02 13:12:35Z INFO Listener] Commit: f49f0247c8f15ef51086a7c2405333cb91c6f3cd
+[2022-11-02 13:12:35Z INFO Listener] Culture: 
+[2022-11-02 13:12:35Z INFO Listener] UI Culture: 
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO Listener] Validating directory permissions for: '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO CommandLineParser] Parse
+[2022-11-02 13:12:35Z INFO CommandLineParser] Parsing 1 args
+[2022-11-02 13:12:35Z INFO CommandLineParser] parsing argument
+[2022-11-02 13:12:35Z INFO CommandLineParser] HasArgs: False
+[2022-11-02 13:12:35Z INFO CommandLineParser] Adding Command: run
+[2022-11-02 13:12:35Z INFO Listener] Arguments parsed
+[2022-11-02 13:12:35Z INFO Runner] ExecuteCommand
+[2022-11-02 13:12:35Z INFO ConfigurationStore] currentAssemblyLocation: /home/rroyce/dev/konglab/actions-runner/bin/Runner.Listener.dll
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] binPath: /home/rroyce/dev/konglab/actions-runner/bin
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] RootFolder: /home/rroyce/dev/konglab/actions-runner
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'Runner': '/home/rroyce/dev/konglab/actions-runner/.runner'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] ConfigFilePath: /home/rroyce/dev/konglab/actions-runner/.runner
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'Credentials': '/home/rroyce/dev/konglab/actions-runner/.credentials'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] CredFilePath: /home/rroyce/dev/konglab/actions-runner/.credentials
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/rroyce/dev/konglab/actions-runner/.credentials_migrated'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] MigratedCredFilePath: /home/rroyce/dev/konglab/actions-runner/.credentials_migrated
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'Service': '/home/rroyce/dev/konglab/actions-runner/.service'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] ServiceConfigFilePath: /home/rroyce/dev/konglab/actions-runner/.service
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'help': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'version': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'commit': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'check': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Command 'configure': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Command 'remove': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Command 'warmup': 'False'
+[2022-11-02 13:12:35Z INFO ConfigurationManager] LoadSettings
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured()
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured: True
+[2022-11-02 13:12:35Z INFO ConfigurationManager] Is configured: True
+[2022-11-02 13:12:35Z INFO ConfigurationStore] Read setting file: 296 chars
+[2022-11-02 13:12:35Z INFO ConfigurationManager] Settings Loaded
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsServiceConfigured()
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsServiceConfigured: False
+[2022-11-02 13:12:35Z INFO CommandSettings] Command 'run': 'True'
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured()
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured: True
+[2022-11-02 13:12:35Z INFO ConfigurationManager] Is configured: True
+[2022-11-02 13:12:35Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2022-11-02 13:12:35Z INFO Runner] Set runner startup type - Manual
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'once': 'False'
+[2022-11-02 13:12:35Z INFO CommandSettings] Flag 'once': 'False'
+[2022-11-02 13:12:35Z INFO Runner] RunAsync
+[2022-11-02 13:12:35Z INFO ConfigurationManager] LoadSettings
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured()
+[2022-11-02 13:12:35Z INFO ConfigurationStore] IsConfigured: True
+[2022-11-02 13:12:35Z INFO ConfigurationManager] Is configured: True
+[2022-11-02 13:12:35Z INFO ConfigurationManager] Settings Loaded
+[2022-11-02 13:12:35Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "kong-gateway",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX",
+  "GitHubUrl": "https://github.com/rollsroyce22/konglab",
+  "WorkFolder": "kong-gateway"
+}
+[2022-11-02 13:12:35Z INFO MessageListener] Loading Credentials
+[2022-11-02 13:12:35Z INFO ConfigurationStore] HasCredentials()
+[2022-11-02 13:12:35Z INFO ConfigurationStore] stored True
+[2022-11-02 13:12:35Z INFO CredentialManager] GetCredentialProvider
+[2022-11-02 13:12:35Z INFO CredentialManager] Creating type OAuth
+[2022-11-02 13:12:35Z INFO CredentialManager] Creating credential type: OAuth
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:35Z INFO HostContext] Well known directory 'Root': '/home/rroyce/dev/konglab/actions-runner'
+[2022-11-02 13:12:35Z INFO HostContext] Well known config file 'RSACredentials': '/home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams'
+[2022-11-02 13:12:35Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams
+[2022-11-02 13:12:35Z INFO MessageListener] Attempt to create session.
+[2022-11-02 13:12:35Z INFO MessageListener] Connecting to the Runner Server...
+[2022-11-02 13:12:35Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2022-11-02 13:12:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-11-02 13:12:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-11-02 13:12:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-11-02 13:12:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-11-02 13:12:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-11-02 13:12:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-11-02 13:12:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-11-02 13:12:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-11-02 13:12:36Z INFO MessageListener] VssConnection created
+[2022-11-02 13:12:36Z INFO Terminal] WRITE LINE: 
+[2022-11-02 13:12:36Z INFO Terminal] WRITE LINE: 
+[2022-11-02 13:12:36Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams
+[2022-11-02 13:12:36Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams
+[2022-11-02 13:12:36Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2022-11-02 13:12:36Z INFO MessageListener] Session created.
+[2022-11-02 13:12:36Z INFO Terminal] WRITE LINE: Current runner version: '2.298.2'
+[2022-11-02 13:12:36Z INFO Terminal] WRITE LINE: 2022-11-02 13:12:36Z: Listening for Jobs
+[2022-11-02 13:12:36Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2022-11-02 13:12:40Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/rroyce/dev/konglab/actions-runner/.credentials_rsaparams
+[2022-11-02 13:12:40Z INFO MessageListener] Message '1' received from session '67490f4d-df76-416b-a07d-a3b80dcc0220'.
+[2022-11-02 13:12:40Z INFO Runner] Received job message of length 22185 from service, with hash 'b63c14e869cf297a47c7745e782f73f889cf324d1a087f3cfc5995fb15b49c24'
+[2022-11-02 13:12:40Z INFO JobDispatcher] Job request 1 for plan 3682674b-1125-4fbb-a431-aa8eec480e6d job 2c4954a3-4531-5df8-e9d6-393e63c18273 received.
+[2022-11-02 13:12:40Z INFO JobDispatcher] Pull OrchestrationId 3682674b-1125-4fbb-a431-aa8eec480e6d.deploy_to_kong.__default from JWT claims
+[2022-11-02 13:12:40Z INFO Terminal] WRITE LINE: 2022-11-02 13:12:40Z: Running job: Apply generated configuration to local Kong gateway and update API documentation
+[2022-11-02 13:12:40Z INFO JobDispatcher] Start renew job request 1 for job 2c4954a3-4531-5df8-e9d6-393e63c18273.
+[2022-11-02 13:12:40Z INFO JobDispatcher] Successfully renew job request 1, job is valid till 11/02/2022 13:22:40
+[2022-11-02 13:12:40Z INFO HostContext] Well known directory 'Bin': '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper] Starting process:
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   File name: '/home/rroyce/dev/konglab/actions-runner/bin/Runner.Worker'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 107 110'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Working directory: '/home/rroyce/dev/konglab/actions-runner/bin'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2022-11-02 13:12:40Z INFO ProcessInvokerWrapper] Process started with process id 49528, waiting for process exit.
+[2022-11-02 13:12:40Z INFO JobDispatcher] Send job request message to worker for job 2c4954a3-4531-5df8-e9d6-393e63c18273.
+[2022-11-02 13:12:40Z INFO ProcessChannel] Sending message of length 22185, with hash 'b63c14e869cf297a47c7745e782f73f889cf324d1a087f3cfc5995fb15b49c24'
+[2022-11-02 13:12:40Z INFO JobNotification] Entering JobStarted Notification
+[2022-11-02 13:12:40Z INFO JobNotification] Entering StartMonitor
+[2022-11-02 13:12:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:12:45Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-11-02 13:12:45Z INFO ProcessInvokerWrapper] Finished process 49528 with exit code 102, and elapsed time 00:00:05.1379555.
+[2022-11-02 13:12:45Z INFO JobDispatcher] Worker finished for job 2c4954a3-4531-5df8-e9d6-393e63c18273. Code: 102
+[2022-11-02 13:12:45Z INFO JobDispatcher] finish job request for job 2c4954a3-4531-5df8-e9d6-393e63c18273 with result: Failed
+[2022-11-02 13:12:45Z INFO Terminal] WRITE LINE: 2022-11-02 13:12:45Z: Job Apply generated configuration to local Kong gateway and update API documentation completed with result: Failed
+[2022-11-02 13:12:45Z INFO JobDispatcher] Stop renew job request for job 2c4954a3-4531-5df8-e9d6-393e63c18273.
+[2022-11-02 13:12:45Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 1.
+[2022-11-02 13:12:45Z INFO JobNotification] Entering JobCompleted Notification
+[2022-11-02 13:12:45Z INFO JobNotification] Entering EndMonitor
+[2022-11-02 13:16:28Z INFO Terminal] WRITE LINE: Exiting...
+[2022-11-02 13:16:28Z INFO ConfigurationStore] IsServiceConfigured()
+[2022-11-02 13:16:28Z INFO ConfigurationStore] IsServiceConfigured: False
+[2022-11-02 13:16:28Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2022-11-02 13:16:28Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/39RLiXSDGYHBygK1aiowGUAB3Q67xkHdtcEEBhFoO5EBrnKHlX/_apis/distributedtask/pools/1/messages?sessionId=67490f4d-df76-416b-a07d-a3b80dcc0220&lastMessageId=1&status=Online has been cancelled.
+[2022-11-02 13:16:28Z INFO MessageListener] Get next message has been cancelled.
+[2022-11-02 13:16:28Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2022-11-02 13:16:28Z INFO JobDispatcher] Ensure WorkerDispather for job 2c4954a3-4531-5df8-e9d6-393e63c18273 run to finish, cancel any running job.
+[2022-11-02 13:16:28Z INFO JobDispatcher] Job request 2c4954a3-4531-5df8-e9d6-393e63c18273 processed succeed.
+[2022-11-02 13:16:28Z INFO Listener] Runner execution been cancelled.
