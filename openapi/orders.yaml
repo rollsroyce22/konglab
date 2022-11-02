@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: '1.0.1'
+  version: '1.0.2'
   title: Kong Gateway Demo
   license:
     name: Apache 2.0
